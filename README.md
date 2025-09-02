@@ -25,7 +25,7 @@ A responsive, infinite-scroll calendar that displays journal entries with a smoo
    ```
 
 4. **View in Browser**  
-   Open http://localhost:3000 (or the port specified in your terminal)
+   Open http://localhost:5173 (or the port specified in your terminal)
 
 ---
 
@@ -45,7 +45,7 @@ A responsive, infinite-scroll calendar that displays journal entries with a smoo
 
 View Live Demo
 
-📁 GitHub Repository
+## 📁 GitHub Repository
 
 GitHub Repo
 
