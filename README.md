@@ -43,9 +43,9 @@ A responsive, infinite-scroll calendar that displays journal entries with a smoo
 
 ## 🌐 Live Demo
 
-View Live Demo
+[**View Live Demo**](https://your-live-demo-link.com)
 
 ## 📁 GitHub Repository
 
-GitHub Repo
+[**GitHub Repo**](https://github.com/devopslayer/infical)
 
