@@ -63,6 +63,10 @@
   border: none;
 }
 
+.calendar-header .logo .logo-text {
+  margin-bottom: 0.2rem;
+}
+
 .calendar-header .logo .logo-text h2 {
   margin: 0;
   font-size: 2rem;
@@ -106,6 +110,7 @@
   top: 0;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
   gap: 1rem;
   padding: 0 1rem;
   width: 100%;
@@ -124,6 +129,7 @@
 }
 
 .calendar-cell.body {
+  width: 10rem;
   height: 18rem;
   background-color: #fff;
   border: 1px solid #eee;
@@ -229,6 +235,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 10px;
   gap: 10px;
 }
 
@@ -286,11 +293,82 @@
   color: #121c35;
 }
 
+@media (width >= 1441px) {
+  .calendar-grid {
+    gap: 1rem;
+  }
+
+  .calendar-cell.body {
+    width: 100%;
+    height: 20rem;
+  }
+}
+
+@media (max-width: 1440px) {
+  .calendar-grid {
+    gap: 0.2rem;
+    justify-items: center;
+  }
+
+  .header-container {
+    gap: 0;
+  }
+
+  .calendar-cell.header {
+    width: 8rem;
+  }
+
+  .calendar-cell.body {
+    width: 8rem;
+    height: 20rem;
+  }
+}
+
+@media (width < 1400px) and (width > 1024px) {
+  .calendar-cell.body {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .calendar-cell.body {
+    width: 5rem;
+    height: 14rem;
+  }
+
+  .header-container {
+    gap: 0;
+  }
+
+  .calendar-cell.header {
+    width: 100%;
+  }
+
+  .calendar-img img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .stars .star-icon {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  .categories-tag .category {
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    padding: 0;
+    font-size: 0.6rem;
+  }
+}
+
 @media (max-width: 600px) {
   .calendar-grid {
     grid-template-columns: repeat(7, 1fr);
-    gap: 0.5rem;
-    padding: 0.5rem;
+    gap: 0.2rem;
   }
 
   .calendar-cell {
@@ -298,12 +376,30 @@
     font-size: 0.875rem;
   }
 
+  .calendar-cell.header {
+    width: 100%;
+    font-size: 0.5rem;
+  }
+
+  .calendar-header {
+    padding: 0.5rem;
+  }
+
   .calendar-header h2 {
-    font-size: 1rem;
+    font-size: 0.5rem;
+  }
+
+  .calendar-header .logo .logo-text h2 {
+    font-size: 1.25rem;
   }
 
   .calendar-header button {
-    font-size: 1.25rem;
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .calendar-header .logo .btn-back {
+    font-size: 1rem;
     padding: 0.25rem 0.5rem;
   }
 
@@ -312,13 +408,35 @@
   }
 
   .calendar-cell.body {
-    height: 12rem;
+    width: 3rem;
+    height: 10rem;
   }
 
   .calendar-img img {
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
     object-fit: cover;
     object-position: center;
+  }
+
+  .stars {
+    gap: 0;
+  }
+
+  .stars .star-icon {
+    width: 0.4rem;
+    height: 0.4rem;
+  }
+
+  .categories-tag {
+    gap: 0.2rem;
+  }
+
+  .categories-tag .category {
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    padding: 0;
+    font-size: 0.4rem;
   }
 }
