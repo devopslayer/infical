@@ -1,4 +1,3 @@
-import useData from "../../hooks/useData";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -13,11 +12,8 @@ import {
 import { FaAngleLeft, FaAngleRight, FaStar } from "react-icons/fa";
 import "./SwiperCard.css";
 
-function SwiperCard() {
-  const { data, loading, error } = useData();
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error loading data.</p>;
+function SwiperCard({ data, initialIndex }) {
+  if (!data || data.length === 0) return <p>No data available</p>;
 
   function formatDate(fulldate) {
     const [day, month, year] = fulldate.split("/").map(Number);
@@ -48,6 +44,7 @@ function SwiperCard() {
   return (
     <div className="sc-container">
       <Swiper
+        initialSlide={initialIndex || 0}
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
